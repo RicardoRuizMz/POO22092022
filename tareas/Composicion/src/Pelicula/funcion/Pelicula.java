@@ -4,9 +4,9 @@
  */
 package Pelicula.funcion;
 
+import Pelicula.componentes.Actor;
 import Pelicula.componentes.Director;
 import Pelicula.componentes.Productora;
-import libro.componentes.Autor;
 
 /**
  *
@@ -16,25 +16,17 @@ public class Pelicula {
     private String titulo;
     private int duracion;
     private Director director;
-    private Autor autor;
+    private Actor actor;
     private Productora productora;
 
     public Pelicula() {
     }
 
-    public Pelicula(String titulo, int duracion, Director director, Autor autor, Productora productora) {
+    public Pelicula(String titulo, int duracion, Director director, Actor actor, Productora productora) {
         this.titulo = titulo;
         this.duracion = duracion;
         this.director = director;
-        this.autor = autor;
-        this.productora = productora;
-    }
-
-    public Productora getProductora() {
-        return productora;
-    }
-
-    public void setProductora(Productora productora) {
+        this.actor = actor;
         this.productora = productora;
     }
 
@@ -62,19 +54,27 @@ public class Pelicula {
         this.director = director;
     }
 
-    public Autor getAutor() {
-        return autor;
+    public Actor getActor() {
+        return actor;
     }
 
-    public void setAutor(Autor autor) {
-        this.autor = autor;
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+
+    public Productora getProductora() {
+        return productora;
+    }
+
+    public void setProductora(Productora productora) {
+        this.productora = productora;
     }
 
     @Override
     public String toString() {
-        return "Pelicula{" + "titulo=" + titulo + ", duracion=" + duracion + ", director=" + director + ", autor=" + autor + ", productora=" + productora + '}';
+        return "Pelicula{" + "titulo=" + titulo + ", duracion=" + duracion +"minutos" + ", director=" + director + ", actor=" + actor + ", productora=" + productora + '}';
     }
     
-    
+
     
 }
